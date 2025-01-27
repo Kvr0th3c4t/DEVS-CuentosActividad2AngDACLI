@@ -1,4 +1,4 @@
-# DefinitivaActividad2
+# Actividad 2 de Desarrollo de aplicaciones en entorno cliente
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
 
