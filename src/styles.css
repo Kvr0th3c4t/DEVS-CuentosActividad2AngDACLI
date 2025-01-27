@@ -1,1 +1,101 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --color-primary: #4E35F2; 
+    --color-secondary: #1D8FF2; 
+    --color-light: #F2F2F2; 
+    --color-gray: #A6A6A6; 
+    --color-dark: #595959;
+}
+
+.navbar {
+    background-color: var(--color-primary);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    margin-left: 2rem;
+}
+
+.navbar-brand span {
+    color: var(--color-light);
+    font-family: "Orbitron", serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: var(--color-secondary);
+    padding: 0.5rem;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+.collapse .navbar-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    gap: 1rem;
+}
+
+.navbar-nav .nav-link {
+    color: var(--color-light);
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-secondary);
+    background-color: var(--color-light);
+}
+
+.navbar .nav-pills .nav-item .nav-link {
+    background-color: var(--color-secondary);
+    color: var(--color-gray);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar .nav-pills .nav-item .nav-link:hover {
+    background-color: var(--color-light);
+    color: var(--color-secondary);
+}
+
+#btnNavStyle {
+    color: var(--color-light);
+    background-color: var(--color-secondary);
+    width: 190px;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#btnNavStyle:hover {
+    background-color: var(--color-light);
+    color: var(--color-primary);
+}
+
+
+
+

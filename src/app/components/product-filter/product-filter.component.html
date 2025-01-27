@@ -1,0 +1,44 @@
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasFiltros" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filtros</h5>
+        <hr>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+
+        <form #filterForm="ngForm" (ngSubmit)="getDataFilter(filterForm)">
+            <div class="container d-flex flex-column justify-content-evenly">
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInput" name="name" placeholder="Nombre del producto" ngModel>
+                    <label for="floatingInput">Nombre del producto</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="floatingSelect" name="category" ngModel>
+                        <option selected>Seleccione la categoría</option>
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="niño">Niño</option>
+                    </select>
+                    <label for="floatingSelect">Seleccione la categoría</label>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" placeholder="PrecioMin" id="minPrice" min="0" max="9998" name="minPrice" ngModel>
+                    <span class="input-group-text">€</span>
+                    <input type="number" class="form-control" placeholder="PrecioMax" id="maxPrice" min="1" max="9999" name="maxPrice" ngModel>
+                    <span class="input-group-text">€</span>
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="checkbox" class="btn-check" id="active" autocomplete="off" name="active" ngModel>
+                    <label class="btn btn-sm btn-outline-primary" for="active">Filtrar productos no activos</label>
+                </div>
+
+                <input class="btn btn-sm btn-danger" type="submit" value="filtar">
+            </div>
+        </form>
+    </div>
+</div>

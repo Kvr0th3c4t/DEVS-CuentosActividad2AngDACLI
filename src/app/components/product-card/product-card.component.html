@@ -1,0 +1,31 @@
+<section class="container">
+
+    <div class="card shadow h-100" [class]="miProducto.active ? 'activo' : 'inactivo'">  
+        
+        <figure>
+            <img [src]="miProducto.image" class="card-img-top" [alt]="miProducto.name">
+        </figure>
+
+        <div class="card-body justify-content-center">
+
+            <h5 class="card-title m-auto align-content-center">{{miProducto.name}}</h5>
+            <hr>
+
+            <div class="container-fluid d-flex flex-row justify-content-evenly">
+                <h5 class="m-auto">{{miProducto.price.toFixed(2)}}€</h5>
+                <span class="badge rounded-pill text-bg-primary h-25 m-auto">{{miProducto.category.charAt(0).toUpperCase() + miProducto.category.slice(1)}}</span>
+            </div>
+            <hr>
+
+            <p class="pDescripcion card-text multiline-truncate mt-2">{{miProducto.description}}</p>  
+
+        </div>
+
+        <div class="card-footer d-flex justify-content-evenly">
+            <p class="text-center m-auto"><small>REF: {{miProducto._id}}</small></p>
+            <button type="button" class="btn btn-sm btn-danger m-auto" (click)="borrarProducto(miProducto)">Eliminar</button>
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,73 @@
+figure {
+    height: 300px;
+    margin: 4px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 1px solid rgb(203, 203, 203);
+}
+
+figure img {
+    max-width: 100%;
+    transform-origin: center;
+    transform: scale(var(--img-scale));
+    transition: transform 0.4s ease-in-out;
+}
+
+figure:has(:hover, :focus) {
+    --img-scale: 1.05;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.card{
+
+    min-height: 625px;
+}
+
+.multiline-truncate {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    max-height: calc(1.5em * 3); 
+    line-height: 1.5em; 
+  }
+
+.card-title{
+    height: 80px;
+}
+
+.pDescripcion{
+    font-size: 13px;
+}
+
+/* Estilo de carta para productos inactivos */
+.card.inactivo {
+    background-color: #fdf7f7;
+    color: #6c757d;
+    border: 1px dashed #e0aeb5;
+    position: relative;
+    opacity: 0.9;
+}
+
+.card.inactivo::after {
+    content: "Fuera de stock";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #a94442;
+    border: solid 1px #a94442;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.card:focus {
+    outline: 3px dashed #6c757d;
+    outline-offset: 3px;
+}
